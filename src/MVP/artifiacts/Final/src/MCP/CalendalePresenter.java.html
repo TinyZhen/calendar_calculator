@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CalendalePresenter.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">MVPmain (Dec 5, 2022 12:50:53 PM)</a> &gt; <a href="../../index.html" class="el_group">Final</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">MCP</a> &gt; <span class="el_source">CalendalePresenter.java</span></div><h1>CalendalePresenter.java</h1><pre class="source lang-java linenums">package MCP;
+
+import java.awt.event.ActionEvent;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoUnit;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.time.DayOfWeek;
+
+public class CalendalePresenter {
+	private IModel calendale;
+	private IView view;
+	private DateTimeFormatter formatter;
+	private String input;
+
+<span class="fc" id="L18">	public CalendalePresenter(IModel m, IView v) {</span>
+<span class="fc" id="L19">		this.calendale = m;</span>
+<span class="fc" id="L20">		this.view = v;</span>
+
+		// listen for the button press
+<span class="fc" id="L23">		view.addButtonActionListener((ActionEvent e) -&gt; {</span>
+<span class="fc" id="L24">			input = view.getText();</span>
+			try {
+<span class="fc" id="L26">				updateview();</span>
+<span class="fc" id="L27">			} catch (DateTimeParseException e1) {</span>
+<span class="fc" id="L28">				view.seterro();</span>
+			}
+<span class="fc" id="L30">		});</span>
+<span class="fc" id="L31">	}</span>
+
+	private void updateview() throws DateTimeParseException {
+<span class="fc bfc" id="L34" title="All 2 branches covered.">		if (errorinput(input)) {</span>
+
+			// store date to model
+<span class="fc" id="L37">			calendale.setdate(input);</span>
+<span class="fc" id="L38">			calendale.shopdaycalculator();</span>
+<span class="fc" id="L39">			calendale.findzodiac();</span>
+
+			// update views
+<span class="fc" id="L42">			view.setnextdate(calendale.getnextdate());</span>
+<span class="fc" id="L43">			view.setprevdate(calendale.getprevdate());</span>
+<span class="fc" id="L44">			view.setweek(calendale.getweek());</span>
+<span class="fc" id="L45">			view.setdate(calendale.getcurdate());</span>
+<span class="fc" id="L46">			view.setshopdate(calendale.getshopdate());</span>
+<span class="fc" id="L47">			view.setzodiac(calendale.getzodiac());</span>
+<span class="fc" id="L48">		} else</span>
+<span class="fc" id="L49">			view.seterro();</span>
+<span class="fc" id="L50">	}</span>
+
+	private boolean errorinput(String s) {
+<span class="fc" id="L53">		Scanner scanner = new Scanner(s);</span>
+<span class="fc" id="L54">		scanner.useDelimiter(&quot;/&quot;);</span>
+<span class="fc" id="L55">		int month = 0, curday = 0, year = 0;</span>
+		try {
+<span class="fc" id="L57">			month = scanner.nextInt();</span>
+<span class="fc" id="L58">			String s1 = scanner.next();</span>
+<span class="fc" id="L59">			curday = Integer.parseInt(s1);</span>
+<span class="fc" id="L60">			year = scanner.nextInt();</span>
+<span class="pc" id="L61">		} catch (NoSuchElementException e) {</span>
+<span class="nc" id="L62">			view.seterro();</span>
+		}
+<span class="fc" id="L64">		int day = 0;</span>
+
+<span class="fc bfc" id="L66" title="All 2 branches covered.">		if (month == 2) {</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">			if (year % 4 == 0) {</span>
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">				if (year % 100 != 0) {</span>
+<span class="nc" id="L69">					day = 29;</span>
+<span class="nc" id="L70">				} else {</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">					if (year % 400 == 0) {</span>
+<span class="fc" id="L72">						day = 29;</span>
+<span class="fc" id="L73">					} else</span>
+<span class="fc" id="L74">						day = 28;</span>
+				}
+<span class="fc" id="L76">			} else {</span>
+<span class="fc" id="L77">				day = 28;</span>
+			}
+<span class="fc bfc" id="L79" title="All 2 branches covered.">			if (curday &gt; day) {</span>
+<span class="fc" id="L80">				return false;</span>
+			} else
+<span class="fc" id="L82">				return true;</span>
+		} else
+<span class="fc" id="L84">			return true;</span>
+
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>MVPmain (Dec 5, 2022 12:50:53 PM)</div></body></html>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Calendale.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">MVPmain (Dec 5, 2022 12:50:53 PM)</a> &gt; <a href="../../index.html" class="el_group">Final</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">MCP</a> &gt; <span class="el_source">Calendale.java</span></div><h1>Calendale.java</h1><pre class="source lang-java linenums">package MCP;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoUnit;
+
+public class Calendale implements IModel {
+	LocalDate date;
+	int numShopday;
+	String sign;
+
+<span class="fc" id="L14">	public Calendale() {</span>
+<span class="fc" id="L15">		date = null;</span>
+<span class="fc" id="L16">		numShopday=0;</span>
+<span class="fc" id="L17">	}</span>
+
+	public String getcurdate() {
+<span class="fc" id="L20">		return &quot;&quot; + date;</span>
+	}
+
+	@Override
+	public void shopdaycalculator() {
+		int year;
+		long days, weeks;
+<span class="fc" id="L27">		numShopday=0;</span>
+<span class="fc" id="L28">		year = date.getYear();</span>
+<span class="fc" id="L29">		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L30">		LocalDate endDate = LocalDate.parse(&quot;12/25/&quot; + year, formatter);</span>
+<span class="fc" id="L31">		LocalDate Eve = LocalDate.parse(&quot;12/24/&quot; + year, formatter);</span>
+<span class="fc" id="L32">		days = ChronoUnit.DAYS.between(date, endDate);</span>
+<span class="fc" id="L33">		weeks = ChronoUnit.WEEKS.between(date, endDate);</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">		if (!Eve.equals(DayOfWeek.SUNDAY))</span>
+<span class="fc" id="L35">			numShopday -= 1;</span>
+<span class="fc" id="L36">		numShopday += days;</span>
+<span class="fc" id="L37">		numShopday -= weeks + 2;</span>
+
+<span class="fc" id="L39">	}</span>
+
+	@Override
+	public int getshopdate() {
+<span class="fc" id="L43">		return numShopday;</span>
+	}
+
+	@Override
+	public void findzodiac() {
+<span class="pc bpc" id="L48" title="1 of 13 branches missed.">		switch (date.getMonthValue()) {</span>
+		case 1:
+<span class="pc bpc" id="L50" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 20)</span>
+<span class="fc" id="L51">				sign = &quot;Capricorn&quot;;</span>
+			else
+<span class="nc" id="L53">				sign = &quot;Aquarius&quot;;</span>
+<span class="nc" id="L54">			break;</span>
+		case 2:
+<span class="fc bfc" id="L56" title="All 2 branches covered.">			if (date.getDayOfMonth() &lt; 20)</span>
+<span class="fc" id="L57">				sign = &quot;Aquarius&quot;;</span>
+			else
+<span class="fc" id="L59">				sign = &quot;Pisces&quot;;</span>
+<span class="fc" id="L60">			break;</span>
+		case 3:
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 21)</span>
+<span class="fc" id="L63">				sign = &quot;Pisces&quot;;</span>
+			else
+<span class="nc" id="L65">				sign = &quot;Aries&quot;;</span>
+<span class="nc" id="L66">			break;</span>
+		case 4:
+<span class="pc bpc" id="L68" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 20)</span>
+<span class="fc" id="L69">				sign = &quot;Aries&quot;;</span>
+			else
+<span class="nc" id="L71">				sign = &quot;Taurus&quot;;</span>
+<span class="nc" id="L72">			break;</span>
+		case 5:
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 21)</span>
+<span class="fc" id="L75">				sign = &quot;Taurus&quot;;</span>
+			else
+<span class="nc" id="L77">				sign = &quot;Gemini&quot;;</span>
+<span class="nc" id="L78">			break;</span>
+		case 6:
+<span class="pc bpc" id="L80" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 21)</span>
+<span class="fc" id="L81">				sign = &quot;Gemini&quot;;</span>
+			else
+<span class="nc" id="L83">				sign = &quot;Cancer&quot;;</span>
+<span class="nc" id="L84">			break;</span>
+		case 7:
+<span class="pc bpc" id="L86" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 23)</span>
+<span class="fc" id="L87">				sign = &quot;Cancer&quot;;</span>
+			else
+<span class="nc" id="L89">				sign = &quot;Leo&quot;;</span>
+<span class="nc" id="L90">			break;</span>
+		case 8:
+<span class="pc bpc" id="L92" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 23)</span>
+<span class="fc" id="L93">				sign = &quot;Leo&quot;;</span>
+			else
+<span class="nc" id="L95">				sign = &quot;Virgo&quot;;</span>
+<span class="nc" id="L96">			break;</span>
+		case 9:
+<span class="pc bpc" id="L98" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 23)</span>
+<span class="fc" id="L99">				sign = &quot;Virgo&quot;;</span>
+			else
+<span class="nc" id="L101">				sign = &quot;libra&quot;;</span>
+<span class="nc" id="L102">			break;</span>
+		case 10:
+<span class="pc bpc" id="L104" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 23)</span>
+<span class="fc" id="L105">				sign = &quot;Libra&quot;;</span>
+			else
+<span class="nc" id="L107">				sign = &quot;Scorpio&quot;;</span>
+<span class="nc" id="L108">			break;</span>
+		case 11:
+<span class="pc bpc" id="L110" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 22)</span>
+<span class="fc" id="L111">				sign = &quot;Scorpio&quot;;</span>
+			else
+<span class="nc" id="L113">				sign = &quot;Sagittarius&quot;;</span>
+<span class="nc" id="L114">			break;</span>
+		case 12:
+
+<span class="pc bpc" id="L117" title="1 of 2 branches missed.">			if (date.getDayOfMonth() &lt; 22)</span>
+<span class="fc" id="L118">				sign = &quot;Sagittarius&quot;;</span>
+			else
+<span class="nc" id="L120">				sign = &quot;Capricorn&quot;;</span>
+			break;
+		}
+
+<span class="fc" id="L124">	}</span>
+
+	@Override
+	public String getzodiac() {
+<span class="fc" id="L128">		return sign;</span>
+	}
+
+	@Override
+	public String getnextdate() {
+<span class="fc" id="L133">		return &quot;&quot; + date.plusDays(1);</span>
+	}
+
+	@Override
+	public String getprevdate() {
+<span class="fc" id="L138">		return &quot;&quot; + date.minusDays(1);</span>
+	}
+
+	@Override
+	public String getweek() {
+<span class="fc" id="L143">		return &quot;&quot; + date.getDayOfWeek();</span>
+	}
+
+	@Override
+	public LocalDate getdate() {
+<span class="nc" id="L148">		return date;</span>
+	}
+
+	@Override
+	public void setdate(String string)throws DateTimeParseException {
+<span class="fc" id="L153">		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L154">		date = LocalDate.parse(string, formatter);</span>
+<span class="fc" id="L155">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>MVPmain (Dec 5, 2022 12:50:53 PM)</div></body></html>

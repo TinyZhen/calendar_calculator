@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CalendarTest.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">MVP.test (Dec 6, 2022 4:00:32 PM)</a> &gt; <a href="../../index.html" class="el_group">Final</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">MVP.test</a> &gt; <span class="el_source">CalendarTest.java</span></div><h1>CalendarTest.java</h1><pre class="source lang-java linenums">package MVP.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+import org.junit.jupiter.api.Test;
+
+import MVP.main.Calendar;
+
+<span class="fc" id="L13">class CalendarTest {</span>
+
+
+	@Test
+	void testShopdaycalculator_afterthanksgiving() {
+<span class="fc" id="L18">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L19">		calendar.setdate(&quot;12/19/2022&quot;);</span>
+<span class="fc" id="L20">		calendar.shopdaycalculator();</span>
+<span class="fc" id="L21">		assertEquals(calendar.getshopdate(),5);</span>
+<span class="fc" id="L22">	}</span>
+
+	@Test
+	void testShopdaycalculator_beforethanksgiving() {
+<span class="fc" id="L26">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L27">		calendar.setdate(&quot;11/19/2022&quot;);</span>
+<span class="fc" id="L28">		calendar.shopdaycalculator();</span>
+<span class="fc" id="L29">		assertEquals(calendar.getshopdate(),29);</span>
+<span class="fc" id="L30">	}</span>
+	
+	@Test
+	void testShopdaycalculator_leapyear() {
+<span class="fc" id="L34">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L35">		calendar.setdate(&quot;02/29/2000&quot;);</span>
+<span class="fc" id="L36">		calendar.shopdaycalculator();</span>
+<span class="fc" id="L37">		assertEquals(calendar.getshopdate(),256);</span>
+<span class="fc" id="L38">	}</span>
+	
+	void testShopdaycalculator_nonleapyear() {
+<span class="nc" id="L41">		Calendar calendar = new Calendar();</span>
+<span class="nc" id="L42">		calendar.setdate(&quot;02/28/2001&quot;);</span>
+<span class="nc" id="L43">		calendar.shopdaycalculator();</span>
+<span class="nc" id="L44">		assertEquals(calendar.getshopdate(),255);</span>
+<span class="nc" id="L45">	}</span>
+	
+	void testShopdaycalculator_nonleapyearfail() {
+<span class="nc" id="L48">		Calendar calendar = new Calendar();</span>
+<span class="nc" id="L49">		calendar.setdate(&quot;02/29/2001&quot;);</span>
+<span class="nc" id="L50">		calendar.shopdaycalculator();</span>
+<span class="nc" id="L51">		assertNotEquals(calendar.getshopdate(),255);</span>
+<span class="nc" id="L52">	}</span>
+	
+	@Test
+	void testFindzodiac_Capricorn() {
+<span class="fc" id="L56">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L57">		calendar.setdate(&quot;01/01/2022&quot;);</span>
+<span class="fc" id="L58">		calendar.findzodiac();</span>
+<span class="fc" id="L59">		assertEquals(calendar.getzodiac(),&quot;Capricorn&quot;);</span>
+<span class="fc" id="L60">	}</span>
+
+	@Test
+	void testFindzodiac_Aquarius() {
+<span class="fc" id="L64">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L65">		calendar.setdate(&quot;02/01/2022&quot;);</span>
+<span class="fc" id="L66">		calendar.findzodiac();</span>
+<span class="fc" id="L67">		assertEquals(calendar.getzodiac(),&quot;Aquarius&quot;);</span>
+<span class="fc" id="L68">	}</span>
+	@Test
+	void testFindzodiac_Pisces() {
+<span class="fc" id="L71">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L72">		calendar.setdate(&quot;03/01/2022&quot;);</span>
+<span class="fc" id="L73">		calendar.findzodiac();</span>
+<span class="fc" id="L74">		assertEquals(calendar.getzodiac(),&quot;Pisces&quot;);</span>
+<span class="fc" id="L75">	}</span>
+	@Test
+	void testFindzodiac_Aries() {
+<span class="fc" id="L78">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L79">		calendar.setdate(&quot;04/01/2022&quot;);</span>
+<span class="fc" id="L80">		calendar.findzodiac();</span>
+<span class="fc" id="L81">		assertEquals(calendar.getzodiac(),&quot;Aries&quot;);</span>
+<span class="fc" id="L82">	}</span>
+	@Test
+	void testFindzodiac_Taurus() {
+<span class="fc" id="L85">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L86">		calendar.setdate(&quot;05/01/2022&quot;);</span>
+<span class="fc" id="L87">		calendar.findzodiac();</span>
+<span class="fc" id="L88">		assertEquals(calendar.getzodiac(),&quot;Taurus&quot;);</span>
+<span class="fc" id="L89">	}</span>
+	@Test
+	void testFindzodiac_Gemini() {
+<span class="fc" id="L92">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L93">		calendar.setdate(&quot;06/01/2022&quot;);</span>
+<span class="fc" id="L94">		calendar.findzodiac();</span>
+<span class="fc" id="L95">		assertEquals(calendar.getzodiac(),&quot;Gemini&quot;);</span>
+<span class="fc" id="L96">	}</span>
+	@Test
+	void testFindzodiac_Cancer() {
+<span class="fc" id="L99">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L100">		calendar.setdate(&quot;07/01/2022&quot;);</span>
+<span class="fc" id="L101">		calendar.findzodiac();</span>
+<span class="fc" id="L102">		assertEquals(calendar.getzodiac(),&quot;Cancer&quot;);</span>
+<span class="fc" id="L103">	}</span>
+	@Test
+	void testFindzodiac_Leo() {
+<span class="fc" id="L106">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L107">		calendar.setdate(&quot;08/01/2022&quot;);</span>
+<span class="fc" id="L108">		calendar.findzodiac();</span>
+<span class="fc" id="L109">		assertEquals(calendar.getzodiac(),&quot;Leo&quot;);</span>
+<span class="fc" id="L110">	}</span>
+	@Test
+	void testFindzodiac_Virgo() {
+<span class="fc" id="L113">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L114">		calendar.setdate(&quot;09/01/2022&quot;);</span>
+<span class="fc" id="L115">		calendar.findzodiac();</span>
+<span class="fc" id="L116">		assertEquals(calendar.getzodiac(),&quot;Virgo&quot;);</span>
+<span class="fc" id="L117">	}</span>
+	@Test
+	void testFindzodiac_libra() {
+<span class="fc" id="L120">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L121">		calendar.setdate(&quot;10/01/2022&quot;);</span>
+<span class="fc" id="L122">		calendar.findzodiac();</span>
+<span class="fc" id="L123">		assertEquals(calendar.getzodiac(),&quot;Libra&quot;);</span>
+<span class="fc" id="L124">	}</span>
+	@Test
+	void testFindzodiac_Scorpio() {
+<span class="fc" id="L127">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L128">		calendar.setdate(&quot;11/01/2022&quot;);</span>
+<span class="fc" id="L129">		calendar.findzodiac();</span>
+<span class="fc" id="L130">		assertEquals(calendar.getzodiac(),&quot;Scorpio&quot;);</span>
+<span class="fc" id="L131">	}</span>
+	@Test
+	void testFindzodiac_Sagittarius() {
+<span class="fc" id="L134">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L135">		calendar.setdate(&quot;12/01/2022&quot;);</span>
+<span class="fc" id="L136">		calendar.findzodiac();</span>
+<span class="fc" id="L137">		assertEquals(calendar.getzodiac(),&quot;Sagittarius&quot;);</span>
+<span class="fc" id="L138">	}</span>
+	@Test
+	void testGetnextdate() {
+<span class="fc" id="L141">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L142">		calendar.setdate(&quot;12/01/2022&quot;);</span>
+<span class="fc" id="L143">		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L144">		LocalDate date =LocalDate.parse(&quot;12/02/2022&quot;,formatter);</span>
+<span class="fc" id="L145">		assertEquals(calendar.getnextdate(),&quot;&quot;+date);</span>
+<span class="fc" id="L146">	}</span>
+
+	@Test
+	void testGetprevdate() {
+<span class="fc" id="L150">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L151">		calendar.setdate(&quot;12/02/2022&quot;);</span>
+<span class="fc" id="L152">		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L153">		LocalDate date =LocalDate.parse(&quot;12/01/2022&quot;,formatter);</span>
+<span class="fc" id="L154">		assertEquals(calendar.getprevdate(),&quot;&quot;+date);</span>
+<span class="fc" id="L155">	}</span>
+
+	@Test
+	void testGetweek() {
+<span class="fc" id="L159">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L160">		calendar.setdate(&quot;12/02/2022&quot;);</span>
+<span class="fc" id="L161">		assertEquals(calendar.getweek(),&quot;&quot;+DayOfWeek.FRIDAY);</span>
+<span class="fc" id="L162">	}</span>
+
+	@Test
+	void testSetdate() {
+<span class="fc" id="L166">		Calendar calendar = new Calendar();</span>
+<span class="fc" id="L167">		calendar.setdate(&quot;12/02/2022&quot;);</span>
+<span class="fc" id="L168">		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);</span>
+<span class="fc" id="L169">		LocalDate date =LocalDate.parse(&quot;12/02/2022&quot;,formatter);</span>
+<span class="fc" id="L170">		assertEquals(calendar.getdate(),date);</span>
+<span class="fc" id="L171">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>MVP.test (Dec 6, 2022 4:00:32 PM)</div></body></html>

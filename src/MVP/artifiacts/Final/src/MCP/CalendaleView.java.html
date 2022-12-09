@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>CalendaleView.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">MVPmain (Dec 5, 2022 12:50:53 PM)</a> &gt; <a href="../../index.html" class="el_group">Final</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">MCP</a> &gt; <span class="el_source">CalendaleView.java</span></div><h1>CalendaleView.java</h1><pre class="source lang-java linenums">package MCP;
+
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import java.awt.FlowLayout;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class CalendaleView implements IView {
+
+	private JPanel panel;
+	private JLabel instruct;
+	private JLabel curdate;
+	private JLabel nextdate;
+	private JLabel prevdate;
+	private JLabel shopdate;
+	private JLabel week;
+	private JLabel zodiac;
+	private JLabel errormsg;
+	private JDialog error;
+	private JTextField input;
+	private JButton btn_submit;
+
+<span class="fc" id="L28">	public CalendaleView() {</span>
+<span class="fc" id="L29">		JFrame frame = new JFrame(&quot;Calendale Calculator&quot;);</span>
+<span class="fc" id="L30">		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L31">		frame.setSize(400, 400);</span>
+<span class="fc" id="L32">		frame.setLayout(new FlowLayout());</span>
+<span class="fc" id="L33">		panel = new JPanel();</span>
+<span class="fc" id="L34">		error = new JDialog();</span>
+<span class="fc" id="L35">		errormsg = new JLabel(&quot;invalid date!&quot;);</span>
+<span class="fc" id="L36">		error.add(errormsg);</span>
+<span class="fc" id="L37">		error.setLayout(new FlowLayout());</span>
+<span class="fc" id="L38">		error.setSize(200, 100);</span>
+<span class="fc" id="L39">		BoxLayout boxlayout = new BoxLayout(panel, BoxLayout.Y_AXIS);</span>
+<span class="fc" id="L40">		panel.setLayout(boxlayout);</span>
+<span class="fc" id="L41">		panel.setBorder(new EmptyBorder(new Insets(150, 200, 150, 200)));</span>
+<span class="fc" id="L42">		panel.setSize(400, 400);</span>
+<span class="fc" id="L43">		panel.setSize(400, 400);</span>
+<span class="fc" id="L44">		curdate = new JLabel();</span>
+<span class="fc" id="L45">		nextdate = new JLabel();</span>
+<span class="fc" id="L46">		prevdate = new JLabel();</span>
+<span class="fc" id="L47">		week = new JLabel();</span>
+<span class="fc" id="L48">		shopdate = new JLabel();</span>
+<span class="fc" id="L49">		zodiac = new JLabel();</span>
+<span class="fc" id="L50">		instruct = new JLabel(&quot;Enter a Date(mm/dd/yyyy)&quot;);</span>
+<span class="fc" id="L51">		input = new JTextField();</span>
+<span class="fc" id="L52">		btn_submit = new JButton(&quot;Submit&quot;);</span>
+<span class="fc" id="L53">		panel.add(curdate);</span>
+<span class="fc" id="L54">		panel.add(nextdate);</span>
+<span class="fc" id="L55">		panel.add(prevdate);</span>
+<span class="fc" id="L56">		panel.add(shopdate);</span>
+<span class="fc" id="L57">		panel.add(week);</span>
+<span class="fc" id="L58">		panel.add(zodiac);</span>
+<span class="fc" id="L59">		panel.add(instruct);</span>
+<span class="fc" id="L60">		panel.add(input);</span>
+<span class="fc" id="L61">		panel.add(btn_submit);</span>
+
+<span class="fc" id="L63">		frame.add(panel);</span>
+<span class="fc" id="L64">		frame.pack();</span>
+<span class="fc" id="L65">		frame.setVisible(true);</span>
+<span class="fc" id="L66">		frame.revalidate();</span>
+<span class="fc" id="L67">		frame.repaint();</span>
+<span class="fc" id="L68">	}</span>
+
+	public void addButtonActionListener(ActionListener e) {
+<span class="fc" id="L71">		btn_submit.addActionListener(e);</span>
+
+<span class="fc" id="L73">	}</span>
+
+	public String getText() {
+<span class="fc" id="L76">		return input.getText();</span>
+	}
+
+	public void setdate(String text) {
+<span class="fc" id="L80">		curdate.setText(&quot;Input Date:&quot; + text);</span>
+<span class="fc" id="L81">	}</span>
+
+	public void setnextdate(String text) {
+<span class="fc" id="L84">		nextdate.setText(&quot;Next Date:&quot; + text);</span>
+
+<span class="fc" id="L86">	}</span>
+
+	public void setprevdate(String text) {
+<span class="fc" id="L89">		prevdate.setText(&quot;Previous Date:&quot; + text);</span>
+
+<span class="fc" id="L91">	}</span>
+
+	public void setshopdate(int a) {
+<span class="fc" id="L94">		shopdate.setText(&quot;Number of shopping days until Christmas:&quot; + a);</span>
+
+<span class="fc" id="L96">	}</span>
+
+	public void setweek(String text) {
+<span class="fc" id="L99">		week.setText(&quot;Day of the Week:&quot; + text);</span>
+<span class="fc" id="L100">	}</span>
+
+	public void setzodiac(String text) {
+<span class="fc" id="L103">		zodiac.setText(&quot;The astrological sign is: &quot; + text);</span>
+
+<span class="fc" id="L105">	}</span>
+
+	@Override
+	public void seterro() {
+<span class="fc" id="L109">		error.setVisible(true);</span>
+		
+<span class="fc" id="L111">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span>MVPmain (Dec 5, 2022 12:50:53 PM)</div></body></html>

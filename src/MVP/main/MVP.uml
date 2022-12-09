@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_Xr_14HWcEe2qYrvSfBg1vA" name="MVP">
+    <eAnnotations xmi:id="_XxmuoHWcEe2qYrvSfBg1vA" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_XxmuoXWcEe2qYrvSfBg1vA" source="codegen">
+        <details xmi:id="_XxmuonWcEe2qYrvSfBg1vA" key="codegenDirectory" value="/Final/src"/>
+        <details xmi:id="_X51dkHWcEe2qYrvSfBg1vA" key="AssociatedSourceCode" value="/Final/src/MVP/main/Calendar.java;2650567664/1;/Final/src/MVP/main/CalendarPresenter.java;1974315916/1;/Final/src/MVP/main/CalendarView.java;2825043822/1;/Final/src/MVP/main/IModel.java;3072827643/1;/Final/src/MVP/main/IView.java;3569517848/1;/Final/src/MVP/main/MVPmain.java;1415824092/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_X29IsHWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_X29IsXWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_X29IsnWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_X29Is3WcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_X29ItHWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_X29ItXWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_X29ItnWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_X29It3WcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_X29IuHWcEe2qYrvSfBg1vA">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X2ufMHWcEe2qYrvSfBg1vA" name="MVP">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X2wUYHWcEe2qYrvSfBg1vA" name="main">
+        <packagedElement xmi:type="uml:Class" xmi:id="_X276kHWcEe2qYrvSfBg1vA" name="Calendar">
+          <ownedAttribute xmi:id="_X3_DcHWcEe2qYrvSfBg1vA" name="date" visibility="private" type="_X3mo8XWcEe2qYrvSfBg1vA" association="_X4KpoHWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X3_qgHWcEe2qYrvSfBg1vA" name="numShopday" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_X3_qgnWcEe2qYrvSfBg1vA" name="sign" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_X3n3E3WcEe2qYrvSfBg1vA" client="_X276kHWcEe2qYrvSfBg1vA" supplier="_X3NnYHWcEe2qYrvSfBg1vA" contract="_X3NnYHWcEe2qYrvSfBg1vA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4FxIHWcEe2qYrvSfBg1vA" name="Calendar" specification="_X29vwHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4FxIXWcEe2qYrvSfBg1vA" type="_X276kHWcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>date = null;&#xD;
+		numShopday = 0;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4FxInWcEe2qYrvSfBg1vA" name="getcurdate" specification="_X2-W0HWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4FxI3WcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;&quot; + date;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4FxJHWcEe2qYrvSfBg1vA" name="shopdaycalculator" specification="_X2-W0nWcEe2qYrvSfBg1vA">
+            <language>java</language>
+            <body>int year, month;&#xD;
+		long days, weeks;&#xD;
+		numShopday = 0;&#xD;
+		year = date.getYear();&#xD;
+		month = date.getMonthValue();&#xD;
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);&#xD;
+		LocalDate endDate = LocalDate.parse(&quot;12/25/&quot; + year, formatter);&#xD;
+		LocalDate Eve = LocalDate.parse(&quot;12/24/&quot; + year, formatter);&#xD;
+		LocalDate thanksgiving = LocalDate.of(year, month, 1).with(lastInMonth(DayOfWeek.THURSDAY));&#xD;
+		days = ChronoUnit.DAYS.between(date, endDate);&#xD;
+		weeks = ChronoUnit.WEEKS.between(date, endDate);&#xD;
+		System.out.print(weeks);&#xD;
+		if (!Eve.equals(DayOfWeek.SUNDAY))&#xD;
+			numShopday -= 1;&#xD;
+		numShopday += days;&#xD;
+		if (date.compareTo(thanksgiving) > 0)&#xD;
+			numShopday -= 1;&#xD;
+		else&#xD;
+			numShopday -= 0;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4FxJXWcEe2qYrvSfBg1vA" name="getshopdate" specification="_X2-943WcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4FxJnWcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return numShopday;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4FxJ3WcEe2qYrvSfBg1vA" name="findzodiac" specification="_X2_k83WcEe2qYrvSfBg1vA">
+            <language>java</language>
+            <body>switch (date.getMonthValue()) {&#xD;
+		case 1:&#xD;
+			if (date.getDayOfMonth() &lt; 20)&#xD;
+				sign = &quot;Capricorn&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Aquarius&quot;;&#xD;
+			break;&#xD;
+		case 2:&#xD;
+			if (date.getDayOfMonth() &lt; 20)&#xD;
+				sign = &quot;Aquarius&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Pisces&quot;;&#xD;
+			break;&#xD;
+		case 3:&#xD;
+			if (date.getDayOfMonth() &lt; 21)&#xD;
+				sign = &quot;Pisces&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Aries&quot;;&#xD;
+			break;&#xD;
+		case 4:&#xD;
+			if (date.getDayOfMonth() &lt; 20)&#xD;
+				sign = &quot;Aries&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Taurus&quot;;&#xD;
+			break;&#xD;
+		case 5:&#xD;
+			if (date.getDayOfMonth() &lt; 21)&#xD;
+				sign = &quot;Taurus&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Gemini&quot;;&#xD;
+			break;&#xD;
+		case 6:&#xD;
+			if (date.getDayOfMonth() &lt; 21)&#xD;
+				sign = &quot;Gemini&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Cancer&quot;;&#xD;
+			break;&#xD;
+		case 7:&#xD;
+			if (date.getDayOfMonth() &lt; 23)&#xD;
+				sign = &quot;Cancer&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Leo&quot;;&#xD;
+			break;&#xD;
+		case 8:&#xD;
+			if (date.getDayOfMonth() &lt; 23)&#xD;
+				sign = &quot;Leo&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Virgo&quot;;&#xD;
+			break;&#xD;
+		case 9:&#xD;
+			if (date.getDayOfMonth() &lt; 23)&#xD;
+				sign = &quot;Virgo&quot;;&#xD;
+			else&#xD;
+				sign = &quot;libra&quot;;&#xD;
+			break;&#xD;
+		case 10:&#xD;
+			if (date.getDayOfMonth() &lt; 23)&#xD;
+				sign = &quot;Libra&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Scorpio&quot;;&#xD;
+			break;&#xD;
+		case 11:&#xD;
+			if (date.getDayOfMonth() &lt; 22)&#xD;
+				sign = &quot;Scorpio&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Sagittarius&quot;;&#xD;
+			break;&#xD;
+		case 12:&#xD;
+&#xD;
+			if (date.getDayOfMonth() &lt; 22)&#xD;
+				sign = &quot;Sagittarius&quot;;&#xD;
+			else&#xD;
+				sign = &quot;Capricorn&quot;;&#xD;
+			break;&#xD;
+		}&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYMHWcEe2qYrvSfBg1vA" name="getzodiac" specification="_X2_k93WcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYMXWcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return sign;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYMnWcEe2qYrvSfBg1vA" name="getnextdate" specification="_X3AMBHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYM3WcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;&quot; + date.plusDays(1);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYNHWcEe2qYrvSfBg1vA" name="getprevdate" specification="_X3AzFHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYNXWcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;&quot; + date.minusDays(1);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYNnWcEe2qYrvSfBg1vA" name="getweek" specification="_X3BaJHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYN3WcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;&quot; + date.getDayOfWeek();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYOHWcEe2qYrvSfBg1vA" name="getdate" specification="_X3CBNHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYOXWcEe2qYrvSfBg1vA" type="_X3mo8XWcEe2qYrvSfBg1vA" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return date;&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4GYOnWcEe2qYrvSfBg1vA" name="setdate" specification="_X3DPUXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4GYO3WcEe2qYrvSfBg1vA" name="string">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>DateTimeFormatter formatter = DateTimeFormatter.ofPattern(&quot;MM/dd/yyyy&quot;);&#xD;
+		date = LocalDate.parse(string, formatter);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_X29vwHWcEe2qYrvSfBg1vA" name="Calendar" method="_X4FxIHWcEe2qYrvSfBg1vA">
+            <eAnnotations xmi:id="_X29vwXWcEe2qYrvSfBg1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_X29vwnWcEe2qYrvSfBg1vA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_X29vw3WcEe2qYrvSfBg1vA" type="_X276kHWcEe2qYrvSfBg1vA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X2-W0HWcEe2qYrvSfBg1vA" name="getcurdate" method="_X4FxInWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X2-W0XWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X2-W0nWcEe2qYrvSfBg1vA" name="shopdaycalculator" method="_X4FxJHWcEe2qYrvSfBg1vA"/>
+          <ownedOperation xmi:id="_X2-943WcEe2qYrvSfBg1vA" name="getshopdate" method="_X4FxJXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X2-95HWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X2_k83WcEe2qYrvSfBg1vA" name="findzodiac" method="_X4FxJ3WcEe2qYrvSfBg1vA"/>
+          <ownedOperation xmi:id="_X2_k93WcEe2qYrvSfBg1vA" name="getzodiac" method="_X4GYMHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3AMAHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3AMBHWcEe2qYrvSfBg1vA" name="getnextdate" method="_X4GYMnWcEe2qYrvSfBg1vA" raisedException="_WCXJIHWdEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3AzEHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3AzFHWcEe2qYrvSfBg1vA" name="getprevdate" method="_X4GYNHWcEe2qYrvSfBg1vA" raisedException="_WCXJIHWdEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3BaIHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3BaJHWcEe2qYrvSfBg1vA" name="getweek" method="_X4GYNnWcEe2qYrvSfBg1vA" raisedException="_WCXJIHWdEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3CBMHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3CBNHWcEe2qYrvSfBg1vA" name="getdate" method="_X4GYOHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3y2MHWcEe2qYrvSfBg1vA" type="_X3mo8XWcEe2qYrvSfBg1vA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3DPUXWcEe2qYrvSfBg1vA" name="setdate" method="_X4GYOnWcEe2qYrvSfBg1vA" raisedException="_X3nQAXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3DPUnWcEe2qYrvSfBg1vA" name="string">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3FrkHWcEe2qYrvSfBg1vA" name="CalendarPresenter">
+          <ownedAttribute xmi:id="_X4ARkXWcEe2qYrvSfBg1vA" name="calendale" visibility="private" type="_X3NnYHWcEe2qYrvSfBg1vA" association="_X4LQsXWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4A4oHWcEe2qYrvSfBg1vA" name="view" visibility="private" type="_X3PckHWcEe2qYrvSfBg1vA" association="_X4LQtHWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4A4onWcEe2qYrvSfBg1vA" name="formatter" visibility="private" type="_X3mo83WcEe2qYrvSfBg1vA" association="_X4Me0HWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4BfsXWcEe2qYrvSfBg1vA" name="input" visibility="private">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4G_QHWcEe2qYrvSfBg1vA" name="CalendarPresenter" specification="_X3q6YHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4G_QXWcEe2qYrvSfBg1vA" name="m" type="_X3NnYHWcEe2qYrvSfBg1vA"/>
+            <ownedParameter xmi:id="_X4G_QnWcEe2qYrvSfBg1vA" name="v" type="_X3PckHWcEe2qYrvSfBg1vA"/>
+            <ownedParameter xmi:id="_X4G_Q3WcEe2qYrvSfBg1vA" type="_X3FrkHWcEe2qYrvSfBg1vA" direction="return"/>
+            <language>java</language>
+            <body>this.calendale = m;&#xD;
+		this.view = v;&#xD;
+&#xD;
+		// listen for the button press&#xD;
+		view.addButtonActionListener((ActionEvent e) -> {&#xD;
+			input = view.getText();&#xD;
+			try {&#xD;
+				updateview();&#xD;
+			} catch (DateTimeParseException e1) {&#xD;
+				view.seterro();&#xD;
+			}&#xD;
+		});&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4G_RHWcEe2qYrvSfBg1vA" name="updateview" specification="_X3GSoHWcEe2qYrvSfBg1vA">
+            <language>java</language>
+            <body>if (errorinput(input)) {&#xD;
+&#xD;
+			// store date to model&#xD;
+			calendale.setdate(input);&#xD;
+			calendale.shopdaycalculator();&#xD;
+			calendale.findzodiac();&#xD;
+&#xD;
+			// update views&#xD;
+			view.setnextdate(calendale.getnextdate());&#xD;
+			view.setprevdate(calendale.getprevdate());&#xD;
+			view.setweek(calendale.getweek());&#xD;
+			view.setdate(calendale.getcurdate());&#xD;
+			view.setshopdate(calendale.getshopdate());&#xD;
+			view.setzodiac(calendale.getzodiac());&#xD;
+		} else&#xD;
+			view.seterro();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4G_RXWcEe2qYrvSfBg1vA" name="errorinput" specification="_X3GSoXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4G_RnWcEe2qYrvSfBg1vA" name="s">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_X4G_R3WcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>Scanner scanner = new Scanner(s);&#xD;
+		scanner.useDelimiter(&quot;/&quot;);&#xD;
+		int month = 0, curday = 0, year = 0;&#xD;
+		try {&#xD;
+			month = scanner.nextInt();&#xD;
+			String s1 = scanner.next();&#xD;
+			curday = Integer.parseInt(s1);&#xD;
+			year = scanner.nextInt();&#xD;
+		} catch (Exception e) {&#xD;
+			view.seterro();&#xD;
+		}&#xD;
+		int day = 0;&#xD;
+&#xD;
+		if (month == 2) {&#xD;
+			if (year % 4 == 0) {&#xD;
+				if (year % 100 != 0) {&#xD;
+					day = 29;&#xD;
+				} else {&#xD;
+					if (year % 400 == 0) {&#xD;
+						day = 29;&#xD;
+					} else&#xD;
+						day = 28;&#xD;
+				}&#xD;
+			} else {&#xD;
+				day = 28;&#xD;
+			}&#xD;
+			if (curday > day) {&#xD;
+				return false;&#xD;
+			} else&#xD;
+				return true;&#xD;
+		} else&#xD;
+			return true;&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_X3GSoHWcEe2qYrvSfBg1vA" name="updateview" visibility="private" method="_X4G_RHWcEe2qYrvSfBg1vA" raisedException="_X3nQAXWcEe2qYrvSfBg1vA"/>
+          <ownedOperation xmi:id="_X3GSoXWcEe2qYrvSfBg1vA" name="errorinput" visibility="private" method="_X4G_RXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3G5sHWcEe2qYrvSfBg1vA" name="s">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_X3G5sXWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3q6YHWcEe2qYrvSfBg1vA" name="CalendarPresenter" method="_X4G_QHWcEe2qYrvSfBg1vA">
+            <eAnnotations xmi:id="_X3q6Y3WcEe2qYrvSfBg1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_X3q6ZHWcEe2qYrvSfBg1vA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_X3q6YXWcEe2qYrvSfBg1vA" name="m" type="_X3NnYHWcEe2qYrvSfBg1vA"/>
+            <ownedParameter xmi:id="_X3q6YnWcEe2qYrvSfBg1vA" name="v" type="_X3PckHWcEe2qYrvSfBg1vA"/>
+            <ownedParameter xmi:id="_X3q6ZXWcEe2qYrvSfBg1vA" type="_X3FrkHWcEe2qYrvSfBg1vA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3IH0HWcEe2qYrvSfBg1vA" name="CalendarView">
+          <ownedAttribute xmi:id="_X4CGwHWcEe2qYrvSfBg1vA" name="panel" visibility="private" type="_X3zdQHWcEe2qYrvSfBg1vA" association="_X4NF4HWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4CGwnWcEe2qYrvSfBg1vA" name="instruct" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4NF43WcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4CGxHWcEe2qYrvSfBg1vA" name="curdate" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4Ns8XWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4Ct0XWcEe2qYrvSfBg1vA" name="nextdate" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4OUAXWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4Ct03WcEe2qYrvSfBg1vA" name="prevdate" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4OUBHWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4Ct1XWcEe2qYrvSfBg1vA" name="shopdate" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4O7EXWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4DU4XWcEe2qYrvSfBg1vA" name="week" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4O7FHWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4DU43WcEe2qYrvSfBg1vA" name="zodiac" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4PiIXWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4D78XWcEe2qYrvSfBg1vA" name="errormsg" visibility="private" type="_X30EUHWcEe2qYrvSfBg1vA" association="_X4QJMHWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4D783WcEe2qYrvSfBg1vA" name="error" visibility="private" type="_X37ZEHWcEe2qYrvSfBg1vA" association="_X4QJM3WcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4EjAXWcEe2qYrvSfBg1vA" name="input" visibility="private" type="_X3sIgnWcEe2qYrvSfBg1vA" association="_X4QwQXWcEe2qYrvSfBg1vA"/>
+          <ownedAttribute xmi:id="_X4EjA3WcEe2qYrvSfBg1vA" name="btn_submit" visibility="private" type="_X38nMHWcEe2qYrvSfBg1vA" association="_X4RXUHWcEe2qYrvSfBg1vA"/>
+          <interfaceRealization xmi:id="_X3t9s3WcEe2qYrvSfBg1vA" client="_X3IH0HWcEe2qYrvSfBg1vA" supplier="_X3PckHWcEe2qYrvSfBg1vA" contract="_X3PckHWcEe2qYrvSfBg1vA"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmUHWcEe2qYrvSfBg1vA" name="CalendarView" specification="_X3JV8HWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmUXWcEe2qYrvSfBg1vA" type="_X3IH0HWcEe2qYrvSfBg1vA" direction="return"/>
+            <language>java</language>
+            <body>JFrame frame = new JFrame(&quot;Calendale Calculator&quot;);&#xD;
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+		frame.setSize(400, 400);&#xD;
+		frame.setLayout(new FlowLayout());&#xD;
+		panel = new JPanel();&#xD;
+		error = new JDialog();&#xD;
+		errormsg = new JLabel(&quot;invalid date!&quot;);&#xD;
+		error.add(errormsg);&#xD;
+		error.setLayout(new FlowLayout());&#xD;
+		error.setSize(200, 100);&#xD;
+		BoxLayout boxlayout = new BoxLayout(panel, BoxLayout.Y_AXIS);&#xD;
+		panel.setLayout(boxlayout);&#xD;
+		panel.setBorder(new EmptyBorder(new Insets(150, 200, 150, 200)));&#xD;
+		panel.setSize(400, 400);&#xD;
+		panel.setSize(400, 400);&#xD;
+		curdate = new JLabel();&#xD;
+		nextdate = new JLabel();&#xD;
+		prevdate = new JLabel();&#xD;
+		week = new JLabel();&#xD;
+		shopdate = new JLabel();&#xD;
+		zodiac = new JLabel();&#xD;
+		instruct = new JLabel(&quot;Enter a Date(mm/dd/yyyy)&quot;);&#xD;
+		input = new JTextField();&#xD;
+		btn_submit = new JButton(&quot;Submit&quot;);&#xD;
+		panel.add(curdate);&#xD;
+		panel.add(nextdate);&#xD;
+		panel.add(prevdate);&#xD;
+		panel.add(shopdate);&#xD;
+		panel.add(week);&#xD;
+		panel.add(zodiac);&#xD;
+		panel.add(instruct);&#xD;
+		panel.add(input);&#xD;
+		panel.add(btn_submit);&#xD;
+&#xD;
+		frame.add(panel);&#xD;
+		frame.pack();&#xD;
+		frame.setVisible(true);&#xD;
+		frame.revalidate();&#xD;
+		frame.repaint();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmUnWcEe2qYrvSfBg1vA" name="addButtonActionListener" specification="_X39OQHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmU3WcEe2qYrvSfBg1vA" name="e" type="_X3t9sXWcEe2qYrvSfBg1vA"/>
+            <language>java</language>
+            <body>btn_submit.addActionListener(e);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmVHWcEe2qYrvSfBg1vA" name="getText" specification="_X3JV9HWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmVXWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return input.getText();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmVnWcEe2qYrvSfBg1vA" name="setdate" specification="_X3J9AHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmV3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>curdate.setText(&quot;Input Date:&quot; + text);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmWHWcEe2qYrvSfBg1vA" name="setnextdate" specification="_X3J9AnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmWXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>nextdate.setText(&quot;Next Date:&quot; + text);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4HmWnWcEe2qYrvSfBg1vA" name="setprevdate" specification="_X3J9BHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4HmW3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>prevdate.setText(&quot;Previous Date:&quot; + text);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4INYHWcEe2qYrvSfBg1vA" name="setshopdate" specification="_X3KkEHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4INYXWcEe2qYrvSfBg1vA" name="a">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>shopdate.setText(&quot;Number of shopping days until Christmas:&quot; + a);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4INYnWcEe2qYrvSfBg1vA" name="setweek" specification="_X3KkEnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4INY3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>week.setText(&quot;Day of the Week:&quot; + text);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4INZHWcEe2qYrvSfBg1vA" name="setzodiac" specification="_X3KkFHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4INZXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>zodiac.setText(&quot;The astrological sign is: &quot; + text);&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4INZnWcEe2qYrvSfBg1vA" name="seterro" specification="_X3LLIHWcEe2qYrvSfBg1vA">
+            <language>java</language>
+            <body>error.setVisible(true);&#xD;
+		&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_X3JV8HWcEe2qYrvSfBg1vA" name="CalendarView" method="_X4HmUHWcEe2qYrvSfBg1vA">
+            <eAnnotations xmi:id="_X3JV8XWcEe2qYrvSfBg1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+              <details xmi:id="_X3JV8nWcEe2qYrvSfBg1vA" key="create"/>
+            </eAnnotations>
+            <ownedParameter xmi:id="_X3JV83WcEe2qYrvSfBg1vA" type="_X3IH0HWcEe2qYrvSfBg1vA" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3JV9HWcEe2qYrvSfBg1vA" name="getText" method="_X4HmVHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3JV9XWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3J9AHWcEe2qYrvSfBg1vA" name="setdate" method="_X4HmVnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3J9AXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3J9AnWcEe2qYrvSfBg1vA" name="setnextdate" method="_X4HmWHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3J9A3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3J9BHWcEe2qYrvSfBg1vA" name="setprevdate" method="_X4HmWnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3J9BXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3KkEHWcEe2qYrvSfBg1vA" name="setshopdate" method="_X4INYHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3KkEXWcEe2qYrvSfBg1vA" name="a">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3KkEnWcEe2qYrvSfBg1vA" name="setweek" method="_X4INYnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3KkE3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3KkFHWcEe2qYrvSfBg1vA" name="setzodiac" method="_X4INZHWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3KkFXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3LLIHWcEe2qYrvSfBg1vA" name="seterro" method="_X4INZnWcEe2qYrvSfBg1vA"/>
+          <ownedOperation xmi:id="_X39OQHWcEe2qYrvSfBg1vA" name="addButtonActionListener" method="_X4HmUnWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X39OQXWcEe2qYrvSfBg1vA" name="e" type="_X3t9sXWcEe2qYrvSfBg1vA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_X3NnYHWcEe2qYrvSfBg1vA" name="IModel">
+          <ownedOperation xmi:id="_X3OOcHWcEe2qYrvSfBg1vA" name="setdate">
+            <ownedParameter xmi:id="_X3OOcXWcEe2qYrvSfBg1vA" name="string">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3OOcnWcEe2qYrvSfBg1vA" name="getcurdate">
+            <ownedParameter xmi:id="_X3OOc3WcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3OOdHWcEe2qYrvSfBg1vA" name="shopdaycalculator"/>
+          <ownedOperation xmi:id="_X3OOdXWcEe2qYrvSfBg1vA" name="getshopdate">
+            <ownedParameter xmi:id="_X3OOdnWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3OOd3WcEe2qYrvSfBg1vA" name="findzodiac"/>
+          <ownedOperation xmi:id="_X3OOeHWcEe2qYrvSfBg1vA" name="getzodiac">
+            <ownedParameter xmi:id="_X3O1gHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3O1gXWcEe2qYrvSfBg1vA" name="getnextdate">
+            <ownedParameter xmi:id="_X3O1gnWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3O1g3WcEe2qYrvSfBg1vA" name="getprevdate">
+            <ownedParameter xmi:id="_X3O1hHWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3O1hXWcEe2qYrvSfBg1vA" name="getweek">
+            <ownedParameter xmi:id="_X3O1hnWcEe2qYrvSfBg1vA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3O1h3WcEe2qYrvSfBg1vA" name="getdate">
+            <ownedParameter xmi:id="_X391UHWcEe2qYrvSfBg1vA" type="_X3mo8XWcEe2qYrvSfBg1vA" direction="return"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_X3PckHWcEe2qYrvSfBg1vA" name="IView">
+          <ownedAttribute xmi:id="_X3PckXWcEe2qYrvSfBg1vA" name="text" isReadOnly="true">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_X3QDoHWcEe2qYrvSfBg1vA" name="setdate">
+            <ownedParameter xmi:id="_X3QDoXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QDonWcEe2qYrvSfBg1vA" name="setnextdate">
+            <ownedParameter xmi:id="_X3QDo3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QDpHWcEe2qYrvSfBg1vA" name="setprevdate">
+            <ownedParameter xmi:id="_X3QDpXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QqsHWcEe2qYrvSfBg1vA" name="setshopdate">
+            <ownedParameter xmi:id="_X3QqsXWcEe2qYrvSfBg1vA" name="a">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QqsnWcEe2qYrvSfBg1vA" name="setweek">
+            <ownedParameter xmi:id="_X3Qqs3WcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QqtHWcEe2qYrvSfBg1vA" name="setzodiac">
+            <ownedParameter xmi:id="_X3QqtXWcEe2qYrvSfBg1vA" name="text">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_X3QqtnWcEe2qYrvSfBg1vA" name="seterro"/>
+          <ownedOperation xmi:id="_X3-cYHWcEe2qYrvSfBg1vA" name="addButtonActionListener">
+            <ownedParameter xmi:id="_X3-cYXWcEe2qYrvSfBg1vA" name="e" type="_X3t9sXWcEe2qYrvSfBg1vA"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3RRwHWcEe2qYrvSfBg1vA" name="MVPmain">
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_X4INZ3WcEe2qYrvSfBg1vA" name="main" specification="_X3RRwXWcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X4I0cHWcEe2qYrvSfBg1vA" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X4I0cXWcEe2qYrvSfBg1vA" value="*"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>IModel model = new Calendar();&#xD;
+		CalendarView view = new CalendarView();&#xD;
+		CalendarPresenter controller =new CalendarPresenter(model,view);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_X3RRwXWcEe2qYrvSfBg1vA" name="main" isStatic="true" method="_X4INZ3WcEe2qYrvSfBg1vA">
+            <ownedParameter xmi:id="_X3RRwnWcEe2qYrvSfBg1vA" name="args">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X3RRw3WcEe2qYrvSfBg1vA" value="*"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4KpoHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4KpoXWcEe2qYrvSfBg1vA _X3_DcHWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4KpoXWcEe2qYrvSfBg1vA" name="" type="_X276kHWcEe2qYrvSfBg1vA" association="_X4KpoHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4LQsXWcEe2qYrvSfBg1vA" name="" memberEnd="_X4LQsnWcEe2qYrvSfBg1vA _X4ARkXWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4LQsnWcEe2qYrvSfBg1vA" name="" type="_X3FrkHWcEe2qYrvSfBg1vA" association="_X4LQsXWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4LQtHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4LQtXWcEe2qYrvSfBg1vA _X4A4oHWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4LQtXWcEe2qYrvSfBg1vA" name="" type="_X3FrkHWcEe2qYrvSfBg1vA" association="_X4LQtHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4Me0HWcEe2qYrvSfBg1vA" name="" memberEnd="_X4Me0XWcEe2qYrvSfBg1vA _X4A4onWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4Me0XWcEe2qYrvSfBg1vA" name="" type="_X3FrkHWcEe2qYrvSfBg1vA" association="_X4Me0HWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4NF4HWcEe2qYrvSfBg1vA" name="" memberEnd="_X4NF4XWcEe2qYrvSfBg1vA _X4CGwHWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4NF4XWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4NF4HWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4NF43WcEe2qYrvSfBg1vA" name="" memberEnd="_X4NF5HWcEe2qYrvSfBg1vA _X4CGwnWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4NF5HWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4NF43WcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4Ns8XWcEe2qYrvSfBg1vA" name="" memberEnd="_X4Ns8nWcEe2qYrvSfBg1vA _X4CGxHWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4Ns8nWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4Ns8XWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4OUAXWcEe2qYrvSfBg1vA" name="" memberEnd="_X4OUAnWcEe2qYrvSfBg1vA _X4Ct0XWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4OUAnWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4OUAXWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4OUBHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4OUBXWcEe2qYrvSfBg1vA _X4Ct03WcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4OUBXWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4OUBHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4O7EXWcEe2qYrvSfBg1vA" name="" memberEnd="_X4O7EnWcEe2qYrvSfBg1vA _X4Ct1XWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4O7EnWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4O7EXWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4O7FHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4O7FXWcEe2qYrvSfBg1vA _X4DU4XWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4O7FXWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4O7FHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4PiIXWcEe2qYrvSfBg1vA" name="" memberEnd="_X4PiInWcEe2qYrvSfBg1vA _X4DU43WcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4PiInWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4PiIXWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4QJMHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4QJMXWcEe2qYrvSfBg1vA _X4D78XWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4QJMXWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4QJMHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4QJM3WcEe2qYrvSfBg1vA" name="" memberEnd="_X4QJNHWcEe2qYrvSfBg1vA _X4D783WcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4QJNHWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4QJM3WcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4QwQXWcEe2qYrvSfBg1vA" name="" memberEnd="_X4QwQnWcEe2qYrvSfBg1vA _X4EjAXWcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4QwQnWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4QwQXWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_X4RXUHWcEe2qYrvSfBg1vA" name="" memberEnd="_X4RXUXWcEe2qYrvSfBg1vA _X4EjA3WcEe2qYrvSfBg1vA">
+          <ownedEnd xmi:id="_X4RXUXWcEe2qYrvSfBg1vA" name="" type="_X3IH0HWcEe2qYrvSfBg1vA" association="_X4RXUHWcEe2qYrvSfBg1vA"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X2vGQHWcEe2qYrvSfBg1vA" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X2vGQXWcEe2qYrvSfBg1vA" name="time">
+        <packagedElement xmi:type="uml:Package" xmi:id="_X2vGQnWcEe2qYrvSfBg1vA" name="format">
+          <packagedElement xmi:type="uml:Class" xmi:id="_X3mo83WcEe2qYrvSfBg1vA" name="DateTimeFormatter"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_X3nQAXWcEe2qYrvSfBg1vA" name="DateTimeParseException"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Package" xmi:id="_X2vGQ3WcEe2qYrvSfBg1vA" name="temporal">
+          <packagedElement xmi:type="uml:Enumeration" xmi:id="_X3n3EXWcEe2qYrvSfBg1vA" name="ChronoUnit"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_MH1c4HWhEe2qYrvSfBg1vA" name="TemporalAdjusters"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Enumeration" xmi:id="_X3mB4HWcEe2qYrvSfBg1vA" name="DayOfWeek"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3mo8XWcEe2qYrvSfBg1vA" name="LocalDate"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_X2xigHWcEe2qYrvSfBg1vA" name="awt">
+        <packagedElement xmi:type="uml:Package" xmi:id="_X2yJkHWcEe2qYrvSfBg1vA" name="event">
+          <packagedElement xmi:type="uml:Class" xmi:id="_X3pFMHWcEe2qYrvSfBg1vA" name="ActionEvent"/>
+          <packagedElement xmi:type="uml:Interface" xmi:id="_X3t9sXWcEe2qYrvSfBg1vA" name="ActionListener"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3tWoXWcEe2qYrvSfBg1vA" name="FlowLayout"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3tWo3WcEe2qYrvSfBg1vA" name="Insets"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_X2yJkXWcEe2qYrvSfBg1vA" name="util">
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3psQXWcEe2qYrvSfBg1vA" name="NoSuchElementException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3psQ3WcEe2qYrvSfBg1vA" name="Scanner"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_X3yPIHWcEe2qYrvSfBg1vA" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3yPIXWcEe2qYrvSfBg1vA" name=""/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WCXJIHWdEe2qYrvSfBg1vA" name="NullPointerException"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_X2yJknWcEe2qYrvSfBg1vA" name="javax">
+      <packagedElement xmi:type="uml:Package" xmi:id="_X2ywoHWcEe2qYrvSfBg1vA" name="swing">
+        <packagedElement xmi:type="uml:Package" xmi:id="_X2ywoXWcEe2qYrvSfBg1vA" name="border">
+          <packagedElement xmi:type="uml:Class" xmi:id="_X3svkXWcEe2qYrvSfBg1vA" name="EmptyBorder"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3sIgHWcEe2qYrvSfBg1vA" name="JFrame"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3sIgnWcEe2qYrvSfBg1vA" name="JTextField"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X3zdQHWcEe2qYrvSfBg1vA" name="JPanel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X30EUHWcEe2qYrvSfBg1vA" name="JLabel"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X37ZEHWcEe2qYrvSfBg1vA" name="JDialog"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_X38nMHWcEe2qYrvSfBg1vA" name="JButton"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_XxnVsHWcEe2qYrvSfBg1vA">
+      <eAnnotations xmi:id="_Xxn8wHWcEe2qYrvSfBg1vA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_Xxn8wXWcEe2qYrvSfBg1vA" base_Package="_Xr_14HWcEe2qYrvSfBg1vA">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X2-94HWcEe2qYrvSfBg1vA" base_Element="_X2-W0nWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X2-94XWcEe2qYrvSfBg1vA" base_Element="_X2-W0nWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X2-94nWcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X2_k8HWcEe2qYrvSfBg1vA" base_Element="_X2-943WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X2_k8XWcEe2qYrvSfBg1vA" base_Element="_X2-943WcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X2_k8nWcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X2_k9HWcEe2qYrvSfBg1vA" base_Element="_X2_k83WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X2_k9XWcEe2qYrvSfBg1vA" base_Element="_X2_k83WcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X2_k9nWcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3AMAXWcEe2qYrvSfBg1vA" base_Element="_X2_k93WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3AMAnWcEe2qYrvSfBg1vA" base_Element="_X2_k93WcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3AMA3WcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3AzEXWcEe2qYrvSfBg1vA" base_Element="_X3AMBHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3AzEnWcEe2qYrvSfBg1vA" base_Element="_X3AMBHWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3AzE3WcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3BaIXWcEe2qYrvSfBg1vA" base_Element="_X3AzFHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3BaInWcEe2qYrvSfBg1vA" base_Element="_X3AzFHWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3BaI3WcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3CBMXWcEe2qYrvSfBg1vA" base_Element="_X3BaJHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3CBMnWcEe2qYrvSfBg1vA" base_Element="_X3BaJHWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3CBM3WcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3CoQHWcEe2qYrvSfBg1vA" base_Element="_X3CBNHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3CoQXWcEe2qYrvSfBg1vA" base_Element="_X3CBNHWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3DPUHWcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3D2YHWcEe2qYrvSfBg1vA" base_Element="_X3DPUXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3D2YXWcEe2qYrvSfBg1vA" base_Element="_X3DPUXWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3D2YnWcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3LLIXWcEe2qYrvSfBg1vA" base_Element="_X3LLIHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Annotations xmi:id="_X3LLInWcEe2qYrvSfBg1vA" base_Element="_X3LLIHWcEe2qYrvSfBg1vA">
+    <annotations xmi:id="_X3LLI3WcEe2qYrvSfBg1vA" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_X3mo8HWcEe2qYrvSfBg1vA" base_Element="_X3mB4HWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3mo8nWcEe2qYrvSfBg1vA" base_Element="_X3mo8XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3nQAHWcEe2qYrvSfBg1vA" base_Element="_X3mo83WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3n3EHWcEe2qYrvSfBg1vA" base_Element="_X3nQAXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3n3EnWcEe2qYrvSfBg1vA" base_Element="_X3n3EXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3psQHWcEe2qYrvSfBg1vA" base_Element="_X3pFMHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3psQnWcEe2qYrvSfBg1vA" base_Element="_X3psQXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3qTUHWcEe2qYrvSfBg1vA" base_Element="_X3psQ3WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3sIgXWcEe2qYrvSfBg1vA" base_Element="_X3sIgHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3svkHWcEe2qYrvSfBg1vA" base_Element="_X3sIgnWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3tWoHWcEe2qYrvSfBg1vA" base_Element="_X3svkXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3tWonWcEe2qYrvSfBg1vA" base_Element="_X3tWoXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3t9sHWcEe2qYrvSfBg1vA" base_Element="_X3tWo3WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3t9snWcEe2qYrvSfBg1vA" base_Element="_X3t9sXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3yPInWcEe2qYrvSfBg1vA" base_Element="_X3yPIXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X3zdQXWcEe2qYrvSfBg1vA" base_Element="_X3zdQHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X30EUXWcEe2qYrvSfBg1vA" base_Element="_X30EUHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X38AIHWcEe2qYrvSfBg1vA" base_Element="_X37ZEHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X38nMXWcEe2qYrvSfBg1vA" base_Element="_X38nMHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3_DcXWcEe2qYrvSfBg1vA" base_Element="_X3_DcHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X3_qgXWcEe2qYrvSfBg1vA" base_Element="_X3_qgHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4ARkHWcEe2qYrvSfBg1vA" base_Element="_X3_qgnWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4ARknWcEe2qYrvSfBg1vA" base_Element="_X4ARkXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4A4oXWcEe2qYrvSfBg1vA" base_Element="_X4A4oHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4BfsHWcEe2qYrvSfBg1vA" base_Element="_X4A4onWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4BfsnWcEe2qYrvSfBg1vA" base_Element="_X4BfsXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4CGwXWcEe2qYrvSfBg1vA" base_Element="_X4CGwHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4CGw3WcEe2qYrvSfBg1vA" base_Element="_X4CGwnWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4Ct0HWcEe2qYrvSfBg1vA" base_Element="_X4CGxHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4Ct0nWcEe2qYrvSfBg1vA" base_Element="_X4Ct0XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4Ct1HWcEe2qYrvSfBg1vA" base_Element="_X4Ct03WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4DU4HWcEe2qYrvSfBg1vA" base_Element="_X4Ct1XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4DU4nWcEe2qYrvSfBg1vA" base_Element="_X4DU4XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4D78HWcEe2qYrvSfBg1vA" base_Element="_X4DU43WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4D78nWcEe2qYrvSfBg1vA" base_Element="_X4D78XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4EjAHWcEe2qYrvSfBg1vA" base_Element="_X4D783WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4EjAnWcEe2qYrvSfBg1vA" base_Element="_X4EjAXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_X4FKEHWcEe2qYrvSfBg1vA" base_Element="_X4EjA3WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4LQsHWcEe2qYrvSfBg1vA" base_Element="_X4KpoHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4LQs3WcEe2qYrvSfBg1vA" base_Element="_X4LQsXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4L3wHWcEe2qYrvSfBg1vA" base_Element="_X4LQtHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4Me0nWcEe2qYrvSfBg1vA" base_Element="_X4Me0HWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4NF4nWcEe2qYrvSfBg1vA" base_Element="_X4NF4HWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4Ns8HWcEe2qYrvSfBg1vA" base_Element="_X4NF43WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4OUAHWcEe2qYrvSfBg1vA" base_Element="_X4Ns8XWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4OUA3WcEe2qYrvSfBg1vA" base_Element="_X4OUAXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4O7EHWcEe2qYrvSfBg1vA" base_Element="_X4OUBHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4O7E3WcEe2qYrvSfBg1vA" base_Element="_X4O7EXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4PiIHWcEe2qYrvSfBg1vA" base_Element="_X4O7FHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4PiI3WcEe2qYrvSfBg1vA" base_Element="_X4PiIXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4QJMnWcEe2qYrvSfBg1vA" base_Element="_X4QJMHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4QwQHWcEe2qYrvSfBg1vA" base_Element="_X4QJM3WcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4QwQ3WcEe2qYrvSfBg1vA" base_Element="_X4QwQXWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_X4RXUnWcEe2qYrvSfBg1vA" base_Element="_X4RXUHWcEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_WCXwMHWdEe2qYrvSfBg1vA" base_Element="_WCXJIHWdEe2qYrvSfBg1vA"/>
+  <UMLLabProfile:Reference xmi:id="_MH2D8HWhEe2qYrvSfBg1vA" base_Element="_MH1c4HWhEe2qYrvSfBg1vA"/>
+</xmi:XMI>
